@@ -14,26 +14,32 @@ if(parola == parolaInversa){
 }
   
 // pari e dispari numero da 1 a 5 random 
+// variabili numeriche
 
-var numUtente = prompt("Inserisci un numero pari o dispari tra 1 e 5")
-var numero1 = document.getElementById("numeroUtente")
-while (numUtente<1 || numUtente>5) {
-  numUtente = prompt("Inserisci un numero fra 1 e 5 per gareggiare")
-} 
-var valoreUtente = false
+
 
   
 function pariDispari(sommaNum) {
-  var numPc = Math.floor(Math.random()*5)
-  var sommaNum = parseInt(numUtente)+ parseInt(numPc)
-  if (sommaNum%2 === 0) {
+var numUtente = prompt("Inserisci un numero pari o dispari tra 1 e 5")
+var numPc = Math.floor(Math.random()*5)
+document.getElementById("numUtente").innerHTML = "il tuo numero " + numUtente 
 
-    document.getElementById("gara").innerHTML = "Hai vintoooooooo!!"
+// controlla se il numero è fra 1 e 5
+while (numUtente<1 || numUtente>5) {
+  numUtente = prompt("Inserisci un numero fra 1 e 5 per gareggiare")
+} 
+
+// controlla se il numero utente e pari o dispari
+  var sommaNum = parseInt(numUtente)+ parseInt(numPc)
+  if (sommaNum%2 === 0 && numUtente%2===0) {
+
+    document.getElementById("gara").innerHTML = " vintoooooooo!!"
 
   } else {
-    document.getElementById("gara").innerHTML = "Hai perso"
+    document.getElementById("gara").innerHTML = " perso"
 
   }
+ 
 
   
 }
