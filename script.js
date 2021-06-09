@@ -1,5 +1,5 @@
 var parola = prompt("inserisci una parola");
-document.getElementById("parola").innerHTML ="la tua parola è" + parola
+document.getElementById("palindromo").innerHTML ="la tua parola è" + parola
 var parolaOutput = document.getElementById("parola")
 
 var parolaInversa = invertiParola(parola);
@@ -22,6 +22,7 @@ function pariDispari(sommaNum) {
   var numUtente = prompt("Inserisci un numero pari o dispari tra 1 e 5")
   var numPc = Math.floor(Math.random()*5)
   document.getElementById("numUtente").innerHTML = "il tuo numero " + numUtente 
+  document.getElementById("numPc").innerHTML = "il numero del pc è " + numPc
 
 // controlla se il numero è fra 1 e 5
 while (numUtente<1 || numUtente>5) {
@@ -32,14 +33,14 @@ while (numUtente<1 || numUtente>5) {
   var sommaNum = parseInt(numUtente)+ parseInt(numPc)
   if (sommaNum%2 === 0 && numUtente%2===0) {
 
-    document.getElementById("gara").innerHTML = " vintoooooooo!!"
+    document.getElementById("gara").innerHTML = " vintoooooooo!! , il numero è pari"
 
   } else if (sommaNum%2 === 1 && numUtente%2===1) {
 
-    document.getElementById("gara").innerHTML = " vintoooooooo!!"
+    document.getElementById("gara").innerHTML = " vintoooooooo!!, il numero è dispari"
 
   } else{
-    document.getElementById("gara").innerHTML = " perso"
+    document.getElementById("gara").innerHTML = " perso.... Ha vinto il pc"
 
   }
  
