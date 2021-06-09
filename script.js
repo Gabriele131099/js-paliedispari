@@ -21,13 +21,14 @@ function pariDispari(sommaNum) {
   // variabili numeriche
   var numUtente = prompt("Inserisci un numero pari o dispari tra 1 e 5")
   var numPc = Math.floor(Math.random()*5)
-  document.getElementById("numUtente").innerHTML = "il tuo numero " + numUtente 
   document.getElementById("numPc").innerHTML = "il numero del pc è " + numPc
 
-// controlla se il numero è fra 1 e 5
-while (numUtente<1 || numUtente>5) {
-  numUtente = prompt("Inserisci un numero fra 1 e 5 per gareggiare")
-} 
+  // controlla se il numero è fra 1 e 5
+  while (numUtente<1 || numUtente>5) {
+    numUtente = prompt("Inserisci un numero fra 1 e 5 per gareggiare")
+  } 
+  document.getElementById("numUtente").innerHTML = "il tuo numero " + numUtente 
+
 
 // controlla se il numero utente e pari o dispari
   var sommaNum = parseInt(numUtente)+ parseInt(numPc)
@@ -43,7 +44,4 @@ while (numUtente<1 || numUtente>5) {
     document.getElementById("gara").innerHTML = " perso.... Ha vinto il pc"
 
   }
- 
-
-  
 }
