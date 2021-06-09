@@ -1,4 +1,5 @@
 var parola = prompt("inserisci una parola");
+document.getElementById("parola").innerHTML ="la tua parola è" + parola
 var parolaOutput = document.getElementById("parola")
 
 var parolaInversa = invertiParola(parola);
@@ -33,7 +34,11 @@ while (numUtente<1 || numUtente>5) {
 
     document.getElementById("gara").innerHTML = " vintoooooooo!!"
 
-  } else {
+  } else if (sommaNum%2 === 1 && numUtente%2===1) {
+
+    document.getElementById("gara").innerHTML = " vintoooooooo!!"
+
+  } else{
     document.getElementById("gara").innerHTML = " perso"
 
   }
